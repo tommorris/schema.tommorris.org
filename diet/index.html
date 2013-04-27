@@ -7,21 +7,98 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Diet</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" />
   </head>
   <body>
+    <header>
     <hgroup>
       <h1>diet</h1>
       <h2>a schema for representing dietary preferences</h2>
     </hgroup>
+    <p>
+      The diet schema provides <a href="http://rdfa.info"><abbr title="RDF in
+      Attributes">RDFa</abbr></a> properties to mark a person's dietary
+      preference.
+    </p>
+    <p>
+      This is useful as it allows applications to aggregate said preferences,
+      allowing for booking of restaurants and catering to provide for
+      vegetarians, vegans, people with dietary preferences etc.
+    </p>
+    </header>
+    <hr />
 
     <section typeof="rdfs:Property" id="dietaryPreference" about="/diet#dietaryPreference">
-      <h2 property="rdfs:label" lang="en">dietary preference</h2>
+      <h3 property="rdfs:label" lang="en">dietary preference</h3>
+      <dl>
+      <dt>predicate URI</dt>
+      <dd><kbd>http://schema.tommorris.org/diet/dietaryPreference</kbd></dd>
+      <dt>domain</dt>
+      <dd><a href="http://xmlns.com/foaf/spec/#term_Person" property="rdfs:domain" resource="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></dd>
+      <dt>range</dt>
+      <dd>Either a textual representation of your dietary preference, or one of the recommended values below.</dd>
+      <dt>recommended values</dt>
+      <dd>
+        <table>
+          <thead>
+            <th>Dietary preference</th>
+            <th>URI</th>
+            <th>Meat</th>
+            <th>Fish</th>
+            <th>Eggs</th>
+            <th>Dairy</th>
+          </thead>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Omnivore">Omnivore</a></td>
+            <td><kbd>http://dbpedia.org/resource/Omnivore</kbd></td>
+            <td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Pescetarianism">Pescatarianism</a></td>
+            <td><kbd>http://dbpedia.org/resource/Pescatarianism</kbd></td>
+            <td>&#x2717;</td><td>&#x2714;</td><td>&#x2714;</td><td>&#x2714;</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Ovo-lacto_vegetarianism">Ovo-lacto vegetarianism</a></td>
+            <td><kbd>http://dbpedia.org/resource/Ovo-lacto_vegetarianism</kbd></td>
+            <td>&#x2717;</td><td>&#x2717;</td><td>&#x2714;</td><td>&#x2714;</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Ovo_vegetarianism">Ovo vegetarianism</a></td>
+            <td><kbd>http://dbpedia.org/resource/Ovo_vegetarianism</kbd></td>
+            <td>&#x2717;</td><td>&#x2717;</td><td>&#x2714;</td><td>&#x2717;</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Lacto_vegetarianism">Lacto vegetarianism</a></td>
+            <td><kbd>http://dbpedia.org/resource/Lacto_vegetarianism</kbd></td>
+            <td>&#x2717;</td><td>&#x2717;</td><td>&#x2717;</td><td>&#x2714;</td>
+          </tr>
+          <tr>
+            <td><a href="https://en.wikipedia.org/wiki/Veganism">Veganism</a></td>
+            <td><kbd>http://dbpedia.org/resource/Veganism</kbd></td>
+            <td>&#x2717;</td><td>&#x2717;</td><td>&#x2717;</td><td>&#x2717;</td>
+          </tr>
+        </table>
+      </dd>
+      <dt>description</dt>
+      <dd>
       <p property="rdfs:comment" lang="en">
         Relates a person to their dietary preference. A person can have zero or
         more dietary preferences: a dietary preference includes allergies,
         sensitivies, religious restrictions and any other thing which is useful
         to know when preparing food for a person.
       </p>
+      </dd>
+      </dl>
     </section>
+    <hr />
+    <footer>
+      <h2>Credits</h2>
+      <p>Created by <a href="http://tommorris.org/">Tom Morris</a>.</p>
+      <h2>License</h2>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_GB"><img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br /><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_GB">Creative Commons Attribution 3.0 Unported License</a>.
+      </p>
+    </footer>
   </body>
 </html>
