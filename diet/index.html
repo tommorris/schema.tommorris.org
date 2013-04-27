@@ -78,8 +78,20 @@
             <td><kbd>http://dbpedia.org/resource/Veganism</kbd></td>
             <td>&#x2717;</td><td>&#x2717;</td><td>&#x2717;</td><td>&#x2717;</td>
           </tr>
+          <tr>
+            <td><a href="#GlutenFree">Gluten-free</a></td>
+            <td><kbd>http://schema.tommorris.org/diet#GlutenFree</kbd></td>
+            <td colspan="4">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><a href="#WheatFree">Wheat-free</a></td>
+            <td><kbd>http://schema.tommorris.org/diet#WheatFree</kbd></td>
+            <td colspan="4">&nbsp;</td>
+          </tr>
         </table>
       </dd>
+      <dt>cardinality</dt>
+      <dd><data property="owl:minCardinality">0</data> to <data>infinity</data></dd>
       <dt>description</dt>
       <dd>
       <p property="rdfs:comment" lang="en">
@@ -90,6 +102,26 @@
       </p>
       </dd>
       </dl>
+    </section>
+    <hr />
+    <h2>Allergies, intolerances etc.</h2>
+    <section id="GlutenFree">
+    <h3 property="rdfs:label">gluten-free diet</h3>
+    <dl>
+    <dt>URI</dt>
+    <dd>http://schema.tommorris.org/diet#GlutenFree</dd>
+    <dt>description</dt>
+    <dd property="rdfs:comment">a diet free of gluten</dd>
+    </dl>
+    </section>
+    <section id="WheatFree">
+    <h3 property="rdfs:label">wheat-free diet</h3>
+    <dl>
+    <dt>URI</dt>
+    <dd>http://schema.tommorris.org/diet#WheatFree</dd>
+    <dt>description</dt>
+    <dd property="rdfs:comment">a diet free of wheat</dd>
+    </dl>
     </section>
     <hr />
     <footer>
