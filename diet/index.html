@@ -34,7 +34,11 @@
       <dt>predicate URI</dt>
       <dd><kbd>http://schema.tommorris.org/diet#dietaryPreference</kbd></dd>
       <dt>domain</dt>
-      <dd><a href="http://xmlns.com/foaf/spec/#term_Person" rel="rdfs:domain" resource="http://xmlns.com/foaf/0.1/Person">foaf:Person</a></dd>
+      <dd>
+        <a href="http://xmlns.com/foaf/spec/#term_Person" rel="rdfs:domain" resource="http://xmlns.com/foaf/0.1/Person">foaf:Person</a>,
+        <a href="https://schema.org/Person" rel="rdfs:domain" resource="https://schema.org/Person">schema:Person</a>,
+        or <a href="http://www.wikidata.org/entity/Q5" rel="rdfs:domain" resource="http://www.wikidata.org/entity/Q5">Wikidata: Q5</a>
+      </dd>
       <dt>range</dt>
       <dd>Either a textual representation of your dietary preference, or one of the recommended values below.</dd>
       <dt>recommended values</dt>
@@ -122,6 +126,12 @@
     <dt>description</dt>
     <dd property="rdfs:comment">a diet free of wheat</dd>
     </dl>
+    </section>
+      
+    <section id="history">
+        <h3>History</h3>
+        <p>2018-02-01: expanded domain to allow for Schema.org and Wikidata versions of 'Person'.</p>
+        <p>2013-04-23: created.</p>
     </section>
     <hr />
     <footer>
